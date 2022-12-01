@@ -1,89 +1,78 @@
 import { useState, useEffect } from "react";
 import Busqueda from "./Busqueda";
+import ListItem from "./ListItem";
 import "./MiApi.css";
 
 const MiApi = () => {
   const [partidos, setPartidos] = useState([]);
   const [search, setSearch] = useState("");
-  const [data, setData] = useState("partidos");
-
-  const formatDate = (date) => {
-    const getDate = new Date(date).toLocaleDateString("en-us", {
-      weekday: "long",
-      month: "short",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
-    return getDate;
-  };
-
-  const getStatus = (status, datetime, time) => {
-    if (status === "future_scheduled")
-      return <p className="status">{formatDate(datetime)}</p>;
-    if (status === "in_progress")
-      return (
-        <p className="status live">
-          <i className="fa-solid fa-futbol"></i> Live {time}
-        </p>
-      );
-    if (status === "completed") return <p className="status">Finished</p>;
-  };
+  const [listData, setListData] = useState([]);
+  const [mode, setMode] = useState("partidos");
 
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("https://worldcupjson.net/matches");
       const data = await res.json();
-
       setPartidos(data);
+      setListData(data);
     };
-
     fetchData();
   }, []);
 
-  const filteredResults = (listdata) =>
-    listdata.filter(
+  const filteredResults = (results) =>
+    results.filter(
       (item) =>
         item.home_team.name.toLowerCase().includes(search.toLowerCase()) ||
         item.away_team.name.toLowerCase().includes(search.toLowerCase())
     );
 
-  const finishedGames = partidos.filter((item) => item.status === "completed");
-  const nextGames = partidos.filter(
-    (item) => item.status === "future_scheduled"
-  );
+  const nextMatches = () =>
+    partidos.filter((item) => item.status === "future_scheduled");
+
+  const pastMatches = () =>
+    partidos.filter((item) => item.status === "completed");
+
+  const changeListData = (e) => {
+    if (e.target.value === "partidos") {
+      setListData(partidos);
+      setMode("partidos");
+    }
+    if (e.target.value === "proximos") {
+      setListData(nextMatches);
+      setMode("proximos");
+    }
+    if (e.target.value === "pasados") {
+      setListData(pastMatches);
+      setMode("pasados");
+    }
+  };
 
   return (
     <section>
       <h1>Match list</h1>
       <Busqueda
-        value={search}
+        textvalue={search}
         setSearch={(e) => {
           setSearch(e.target.value);
         }}
+        selectData={changeListData}
+        mode={mode}
       />
       <ul className="game-list">
-        {(search.length !== 0 ? filteredResults(partidos) : partidos).map(
+        {(search.length !== 0 ? filteredResults(listData) : listData).map(
           (item) => {
             return (
-              <li key={item.id} className="list-item">
-                <div className="match">
-                  <p>{formatDate(item.datetime)}</p>
-                  <img
-                    src={`./flags/${item.home_team_country}.svg`}
-                    alt={item.home_team.name}
-                  />
-                  <p>
-                    {item.home_team.name} {item.home_team.goals} vs{" "}
-                    {item.away_team.goals} {item.away_team.name}
-                  </p>
-                  <img
-                    src={`./flags/${item.away_team_country}.svg`}
-                    alt={item.away_team.name}
-                  />
-                </div>
-              </li>
+              <ListItem
+                key={item.id}
+                id={item.id}
+                datetime={item.datetime}
+                home_team_country={item.home_team_country}
+                home_team_name={item.home_team.name}
+                home_team_goals={item.home_team.goals}
+                away_team_country={item.away_team_country}
+                away_team_name={item.away_team.name}
+                away_team_goals={item.away_team.goals}
+              />
             );
           }
         )}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Busqueda.css";
 
 const Busqueda = (props) => {
   return (
@@ -11,38 +12,39 @@ const Busqueda = (props) => {
           name="searchbar"
           type="text"
           onChange={props.setSearch}
-          value={props.value}
+          value={props.textvalue}
         />
 
-        <div>
+        <fieldset>
+          <legend>Filtrar</legend>
           <input
             type="radio"
-            name="modoLista"
-            id="todos"
-            value="todos"
-            checked={props.data === "todos" ? true : false}
-            onChange={props.chooseData}
+            name="selectdata"
+            id="data1"
+            value="partidos"
+            onChange={props.selectData}
+            checked={props.mode === "partidos"}
           />
-          <label htmlFor="todos">Ver Todos</label>
+          <label htmlFor="data1">All Matches</label>
           <input
             type="radio"
-            name="modoLista"
-            id="finalizado"
-            value="finalizado"
-            checked={props.isChecked}
-            onChange={props.chooseData}
-          />
-          <label htmlFor="finalizado">Ver finalizados</label>
-          <input
-            type="radio"
-            name="modoLista"
-            id="proximos"
+            name="selectdata"
+            id="data2"
             value="proximos"
-            checked={props.isChecked}
-            onChange={props.chooseData}
+            onChange={props.selectData}
+            checked={props.mode === "proximos"}
           />
-          <label htmlFor="proximos">Ver Próximos Partidos</label>
-        </div>
+          <label htmlFor="data2">Next Matches</label>
+          <input
+            type="radio"
+            name="selectdata"
+            id="data3"
+            value="pasados"
+            onChange={props.selectData}
+            checked={props.mode === "pasados"}
+          />
+          <label htmlFor="data3">Past Matches</label>
+        </fieldset>
       </form>
     </section>
   );

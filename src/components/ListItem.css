@@ -1,0 +1,17 @@
+.list-item {
+  background-color: white;
+  padding: .25rem 1rem;
+  border: solid 2px var(--fifaGray);
+}
+
+.list-item .match {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-item .match img {
+  height: 1rem;
+  border-radius: px;
+}
