@@ -1,0 +1,67 @@
+:root {
+  --qatarDarkRed: hsl(343, 73%, 32%);
+  --qatarRed: hsl(341, 100%, 50%);
+  --qatarTeal: hsl(173, 85%, 42%);
+  --qatarGold: hsl(50, 56%, 73%);
+  --fifaGray: hsl(220, 29%, 92%);
+}
+
+section {
+  padding: 1rem;
+}
+
+.today-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.today-match-card {
+  background-color: white;
+  border: solid 2px var(--fifaGray);
+}
+
+.today-match-card p {
+  margin: 0;
+}
+
+.today-match-card .card-header {
+  background-color: var(--qatarDarkRed);
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: .5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+}
+
+.team {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: .5rem;
+}
+
+.team img {
+  height: 1rem;
+}
+
+.team .score {
+  background-color: var(--fifaGray);
+  color: var(--qatarDarkRed);
+  height: 2.5rem;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-content: center;
+  font-weight: 700;
+}
+
+.team div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: .5rem;
+}
