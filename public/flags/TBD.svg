@@ -1,0 +1,24 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 24" width="32" height="24">
+	<title>POL-svg</title>
+	<defs>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+			<path d="m0 0h32v24h-32z"/>
+		</clipPath>
+		<clipPath clipPathUnits="userSpaceOnUse" id="cp2">
+			<path d="m32 0v24h-32v-24z"/>
+		</clipPath>
+	</defs>
+	<style>
+		.s0 { fill: #e5e9f1 } 
+	</style>
+	<g id="Clip-Path" clip-path="url(#cp1)">
+		<g id="Layer">
+			<path id="Layer" fill-rule="evenodd" class="s0" d="m32 0v24h-32v-24z"/>
+			<g id="Clip-Path" clip-path="url(#cp2)">
+				<g id="Layer">
+					<path id="Layer" fill-rule="evenodd" class="s0" d="m32 12v12h-32v-12z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>

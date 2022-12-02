@@ -1,0 +1,50 @@
+.hero {
+  background-color: hsl(343, 73%, 32%);
+  background: no-repeat left top,
+    linear-gradient(hsla(343, 73%, 32%, 0.603), hsla(343, 73%, 32%, 0.866)), url("https://t4.ftcdn.net/jpg/04/86/09/89/360_F_486098918_1RHxvs5xuJmFcbKFGSAdqqFFKXd6bntN.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: white;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.hero h1 {
+  font-family: 'Fugaz One', cursive;
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.hero img {
+  height: 80px;
+}
+
+.hero>div:first-of-type {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.hero button {
+  color: var(--qatarGold);
+  background-color: transparent;
+  border: 2px solid var(--qatarGold);
+  border-radius: 4px;
+  padding: .5rem 2rem;
+  margin-top: 2rem;
+}
+
+.hero>div:last-of-type {
+  background: linear-gradient(hsla(343, 100%, 50%, 0), hsla(343, 100%, 50%, 0.684));
+  width: 50%;
+  height: 100%;
+  clip-path: polygon(20% 0%, 100% 0, 100% 100%, 0% 100%);
+}

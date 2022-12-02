@@ -1,22 +1,24 @@
-:root {
-  --qatarDarkRed: hsl(343, 73%, 32%);
-  --qatarRed: hsl(341, 100%, 50%);
-  --qatarTeal: hsl(173, 85%, 42%);
-  --qatarGold: hsl(50, 56%, 73%);
-  --fifaGray: hsl(220, 29%, 92%);
-}
+ @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--fifaGray);
-}
+ :root {
+   --qatarDarkRed: hsl(343, 73%, 32%);
+   --qatarRed: hsl(341, 100%, 50%);
+   --qatarTeal: hsl(173, 85%, 42%);
+   --qatarGold: hsl(50, 56%, 73%);
+   --fifaGray: hsl(220, 29%, 92%);
+ }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+ body {
+   margin: 0;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+     sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   background-color: var(--fifaGray);
+ }
+
+ code {
+   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+     monospace;
+ }

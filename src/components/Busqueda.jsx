@@ -16,34 +16,53 @@ const Busqueda = (props) => {
         />
 
         <fieldset>
-          <legend>Filtrar</legend>
+          <legend>By round</legend>
           <input
             type="radio"
             name="selectdata"
             id="data1"
-            value="partidos"
+            value="FS"
             onChange={props.selectData}
-            checked={props.mode === "partidos"}
+            checked={props.mode === "FS"}
           />
-          <label htmlFor="data1">All Matches</label>
+          <label htmlFor="data1">Groups Stage</label>
           <input
             type="radio"
             name="selectdata"
-            id="data2"
-            value="proximos"
+            id="data4"
+            value="R16"
             onChange={props.selectData}
-            checked={props.mode === "proximos"}
+            checked={props.mode === "R16"}
           />
-          <label htmlFor="data2">Next Matches</label>
+          <label htmlFor="data4">Round of 16</label>
           <input
             type="radio"
             name="selectdata"
-            id="data3"
-            value="pasados"
+            id="data5"
+            value="QF"
             onChange={props.selectData}
-            checked={props.mode === "pasados"}
+            checked={props.mode === "QF"}
           />
-          <label htmlFor="data3">Past Matches</label>
+          <label htmlFor="data5">Quarter-finals</label>
+          <input
+            type="radio"
+            name="selectdata"
+            id="data6"
+            value="SF"
+            onChange={props.selectData}
+            checked={props.mode === "SF"}
+          />
+          <label htmlFor="data6">Semi-finals</label>
+
+          <input
+            type="radio"
+            name="selectdata"
+            id="data7"
+            value="F"
+            onChange={props.selectData}
+            checked={props.mode === "F"}
+          />
+          <label htmlFor="data7">Final</label>
         </fieldset>
       </form>
     </section>

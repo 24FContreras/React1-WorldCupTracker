@@ -1,12 +1,18 @@
+import Hero from "./components/Hero";
 import MiApi from "./components/MiApi";
 import PartidosHoy from "./components/PartidosHoy";
 
 function App() {
   return (
-    <main>
-      <PartidosHoy />
-      <MiApi />
-    </main>
+    <>
+      <header>
+        <Hero />
+      </header>
+      <main>
+        <PartidosHoy />
+        <MiApi />
+      </main>
+    </>
   );
 }
 

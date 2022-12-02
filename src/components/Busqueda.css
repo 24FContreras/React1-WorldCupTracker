@@ -9,4 +9,32 @@ fieldset {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
+
+input[type=radio] {
+  display: none;
+}
+
+fieldset label {
+  background-color: var(--qatarDarkRed);
+  color: white;
+  padding: .25rem 1rem;
+  border-radius: 4.5px;
+  transition: .3s ease;
+}
+
+input[type=radio]:checked+label {
+  background-color: var(--qatarRed);
+}
+
+/*
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: red;
+    height: 1rem;
+    width: 1rem;
+*/

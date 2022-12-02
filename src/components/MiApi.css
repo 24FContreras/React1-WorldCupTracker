@@ -1,8 +1,13 @@
-.game-list {
+.all-matches-section {
+  background-color: aquamarine;
+  padding: 1rem;
+}
+
+.game-grid {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1rem;
 }

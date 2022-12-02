@@ -1,4 +1,4 @@
-section {
+.today-section {
   padding: 1rem;
 }
 
@@ -6,59 +6,4 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
-}
-
-.today-match-card {
-  background-color: white;
-  box-shadow: 0px 0px 10px 1px hsla(233, 9%, 36%, 0.15);
-}
-
-.today-match-card p {
-  margin: 0;
-}
-
-.today-match-card .card-header {
-  background-color: var(--qatarDarkRed);
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  padding-left: .5rem;
-  font-size: .8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: white;
-}
-
-.team {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: .5rem;
-}
-
-.team:not(:last-child) {
-  border-bottom: solid 2px var(--fifaGray);
-}
-
-.team img {
-  height: 1rem;
-}
-
-.team .score {
-  background-color: var(--fifaGray);
-  color: var(--qatarDarkRed);
-  height: 2.5rem;
-  aspect-ratio: 1/1;
-  display: grid;
-  place-content: center;
-  font-weight: 700;
-  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
-}
-
-.team div {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  gap: .5rem;
 }

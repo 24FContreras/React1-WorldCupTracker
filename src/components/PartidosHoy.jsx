@@ -1,32 +1,9 @@
 import { useState, useEffect } from "react";
+import MatchCard from "./MatchCard";
 import "./PartidosHoy.css";
 
 const PartidosHoy = () => {
   const [partidosHoy, setPartidosHoy] = useState([]);
-
-  const formatDate = (date) => {
-    const getDate = new Date(date).toLocaleDateString("en-us", {
-      weekday: "long",
-      month: "short",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
-    return getDate;
-  };
-
-  const getStatus = (status, datetime, time) => {
-    if (status === "future_scheduled")
-      return <p className="status">{formatDate(datetime)}</p>;
-    if (status === "in_progress")
-      return (
-        <p className="status live">
-          <i className="fa-solid fa-futbol"></i> Live {time}
-        </p>
-      );
-    if (status === "completed") return <p className="status">Finished</p>;
-  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,38 +16,29 @@ const PartidosHoy = () => {
     fetchData();
   }, []);
   return (
-    <section>
+    <section className="today-section">
       <h2>Partidos de hoy</h2>
       <div className="today-grid">
-        {partidosHoy.map((partido) => {
-          return (
-            <article key={partido.id} className="today-match-card">
-              <div className="card-header">
-                {getStatus(partido.status, partido.datetime, partido.time)}
-              </div>
-              <div className="team">
-                <div>
-                  <img
-                    src={`./flags/${partido.home_team_country}.svg`}
-                    alt={partido.home_team.name}
-                  />
-                  <p>{partido.home_team.name}</p>
-                </div>
-                <div className="score">{partido.home_team.goals}</div>
-              </div>
-              <div className="team">
-                <div>
-                  <img
-                    src={`./flags/${partido.away_team_country}.svg`}
-                    alt={partido.away_team.name}
-                  />
-                  <p>{partido.away_team.name}</p>
-                </div>
-                <div className="score">{partido.away_team.goals}</div>
-              </div>
-            </article>
-          );
-        })}
+        {partidosHoy.length !== 0 ? (
+          partidosHoy.map((partido) => {
+            return (
+              <MatchCard
+                key={partido.id}
+                status={partido.status}
+                datetime={partido.datetime}
+                time={partido.time}
+                home_country={partido.home_team_country}
+                home_name={partido.home_team.name}
+                home_goals={partido.home_team.goals}
+                away_country={partido.away_team_country}
+                away_name={partido.away_team.name}
+                away_goals={partido.away_team.goals}
+              />
+            );
+          })
+        ) : (
+          <p>No Games today</p>
+        )}
       </div>
     </section>
   );
