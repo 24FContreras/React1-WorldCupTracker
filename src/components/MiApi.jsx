@@ -7,7 +7,6 @@ const MiApi = () => {
   const [partidos, setPartidos] = useState([]);
   const [search, setSearch] = useState("");
   const [listData, setListData] = useState([]);
-  const [mode, setMode] = useState("FS");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,41 +26,21 @@ const MiApi = () => {
     );
 
   const changeListData = (e) => {
-    if (e.target.value === "FS") {
-      setListData(partidos.filter((item) => item.stage_name === "First stage"));
-      setMode("FS");
-    }
-    if (e.target.value === "R16") {
-      setListData(partidos.filter((item) => item.stage_name === "Round of 16"));
-      setMode("R16");
-    }
-    if (e.target.value === "QF") {
-      setListData(
-        partidos.filter((item) => item.stage_name === "Quarter-final")
-      );
-      setMode("QF");
-    }
-    if (e.target.value === "SF") {
-      setListData(partidos.filter((item) => item.stage_name === "Semi-final"));
-      setMode("SF");
-    }
-    if (e.target.value === "F") {
-      setListData(partidos.filter((item) => item.stage_name === "Final"));
-      setMode("F");
-    }
+    setListData(partidos.filter((item) => item.stage_name === e.target.value));
   };
 
   return (
     <section className="all-matches-section">
-      <h1>Match list</h1>
+      <h2>Match list</h2>
+
       <Busqueda
         textvalue={search}
         setSearch={(e) => {
           setSearch(e.target.value);
         }}
         selectData={changeListData}
-        mode={mode}
       />
+
       <ul className="game-grid">
         {(search.length !== 0 ? filteredResults(listData) : listData)
           .sort((a, b) => a.id - b.id)

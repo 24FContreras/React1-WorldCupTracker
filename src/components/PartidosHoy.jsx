@@ -17,7 +17,7 @@ const PartidosHoy = () => {
   }, []);
   return (
     <section className="today-section">
-      <h2>Partidos de hoy</h2>
+      <h2>Playing today:</h2>
       <div className="today-grid">
         {partidosHoy.length !== 0 ? (
           partidosHoy.map((partido) => {

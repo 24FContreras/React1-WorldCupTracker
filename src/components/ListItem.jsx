@@ -61,9 +61,11 @@ const ListItem = (props) => {
 
   return (
     <li className="list-item">
+      {props.stage === "First stage" ? (
+        <p className="list-group">{getGroup()}</p>
+      ) : null}
+      <p className="list-header">{formatDate(props.datetime)}</p>
       <div className="match">
-        <p>{getGroup()}</p>
-        <p>{formatDate(props.datetime)}</p>
         <img
           src={
             props.home_team_name !== "To Be Determined"
@@ -73,8 +75,10 @@ const ListItem = (props) => {
           alt={props.home_team_name}
         />
         <p>
-          {props.home_team_name} {props.home_team_goals} vs{" "}
-          {props.away_team_goals} {props.away_team_name}
+          {props.home_team_name}{" "}
+          <span className="list-score">{props.home_team_goals}</span> vs{" "}
+          <span className="list-score">{props.away_team_goals}</span>{" "}
+          {props.away_team_name}
         </p>
         <img
           src={

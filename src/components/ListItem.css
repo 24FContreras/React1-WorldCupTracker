@@ -1,17 +1,48 @@
 .list-item {
   background-color: white;
-  padding: .25rem 1rem;
   border: solid 2px var(--fifaGray);
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px 1px hsla(233, 9%, 36%, 0.15);
+  border-radius: 5px;
+}
+
+.list-item>*:not(:last-child) {
+  margin-bottom: .5rem;
 }
 
 .list-item .match {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+}
+
+.list-item .match div {
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
 }
 
 .list-item .match img {
   height: 1rem;
-  border-radius: px;
+}
+
+.list-item .list-score {
+  color: var(--qatarDarkRed);
+  font-weight: 600;
+}
+
+.list-header {
+  font-size: .9rem;
+}
+
+.list-group {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .95rem;
+  color: rgb(101, 108, 122);
+  margin-top: 0;
 }

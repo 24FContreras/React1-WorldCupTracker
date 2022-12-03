@@ -1,13 +1,15 @@
 .all-matches-section {
-  background-color: aquamarine;
   padding: 1rem;
 }
 
 .game-grid {
+  min-height: 60vh;
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  grid-auto-rows: min-content;
   gap: 1rem;
+  margin-bottom: 3rem;
 }
