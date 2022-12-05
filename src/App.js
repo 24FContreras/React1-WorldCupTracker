@@ -1,9 +1,9 @@
-import Hero from "./components/Hero";
-import Nav from "./components/Nav";
-import MiApi from "./components/MiApi";
-import Footer from "./components/Footer";
-import PartidosHoy from "./components/PartidosHoy";
-import Playoffs from "./components/Playoffs";
+import Hero from "./components/Hero/Hero";
+import Nav from "./components/Nav/Nav";
+import MiApi from "./components/MiApi/MiApi";
+import Footer from "./components/Footer/Footer";
+import PartidosHoy from "./components/PartidosHoy/PartidosHoy";
+import Playoffs from "./components/Playoffs/Playoffs";
 
 function App() {
   return (

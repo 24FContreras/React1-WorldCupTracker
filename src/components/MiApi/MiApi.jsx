@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Busqueda from "./Busqueda";
-import ListItem from "./ListItem";
+import Busqueda from "../Busqueda/Busqueda";
+import ListItem from "../ListItem/ListItem";
 import "./MiApi.css";
 
 const MiApi = () => {

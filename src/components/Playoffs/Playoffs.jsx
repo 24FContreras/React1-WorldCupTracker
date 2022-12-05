@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MatchCard from "./MatchCard";
+import MatchCard from "../Playoffs/Playoffs";
 import "./Playoffs.css";
 
 const Playoffs = () => {
