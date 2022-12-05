@@ -7,7 +7,24 @@ const Footer = () => {
         <i className="fa-regular fa-futbol"></i> WORLD CUP TRACKER
       </h3>
 
-      <p>Made by Franco Contreras for Desafío Latam</p>
+      <p>
+        Made by{" "}
+        <a
+          href="https://github.com/24FContreras"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Franco Contreras
+        </a>{" "}
+        for{" "}
+        <a
+          href="https://desafiolatam.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Desafío Latam
+        </a>
+      </p>
       <p>
         Big thanks to Eric Stiens for his world cup public API,{" "}
         <a

@@ -31,9 +31,9 @@ const MiApi = () => {
   };
 
   return (
-    <section className="all-matches-section">
+    <section className="all-matches-section" id="matchlist">
       <h2>
-        <i class="fa-solid fa-rectangle-list"></i> Match list
+        <i className="fa-solid fa-rectangle-list"></i> Match list
       </h2>
 
       <Busqueda

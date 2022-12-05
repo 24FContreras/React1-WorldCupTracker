@@ -21,7 +21,7 @@ const Playoffs = () => {
   return (
     <section className="playoffs" id="playoffs">
       <h2>
-        <i class="fa-solid fa-trophy"></i> Elimination Bracket
+        <i className="fa-solid fa-trophy"></i> Elimination Bracket
       </h2>
       <div className="playoffs-tree">
         <div className="round-of-16">

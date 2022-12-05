@@ -1,4 +1,5 @@
 import Hero from "./components/Hero";
+import Nav from "./components/Nav";
 import MiApi from "./components/MiApi";
 import Footer from "./components/Footer";
 import PartidosHoy from "./components/PartidosHoy";
@@ -7,6 +8,7 @@ import Playoffs from "./components/Playoffs";
 function App() {
   return (
     <>
+      <Nav />
       <header>
         <Hero />
       </header>

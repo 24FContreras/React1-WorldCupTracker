@@ -19,7 +19,7 @@ const PartidosHoy = () => {
   return (
     <section className="today-section" id="today">
       <h2>
-        <i class="fa-regular fa-futbol"></i> Playing today
+        <i className="fa-regular fa-futbol"></i> Playing today
       </h2>
       <div className="today-grid">
         {partidosHoy.length !== 0 ? (

@@ -8,6 +8,10 @@
    --fifaGray: hsl(220, 29%, 92%);
  }
 
+ html {
+   scroll-padding-top: 3rem;
+ }
+
  body {
    margin: 0;
    font-family: 'Poppins', sans-serif;
