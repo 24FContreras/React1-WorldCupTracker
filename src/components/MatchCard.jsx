@@ -14,11 +14,14 @@ const MatchCard = (props) => {
   };
 
   const getStatus = () => {
-    if (props.status === "future_scheduled")
+    if (
+      props.status === "future_scheduled" ||
+      props.status === "future_unscheduled"
+    )
       return <p className="status">{formatDate(props.datetime)}</p>;
     if (props.status === "in_progress")
       return (
-        <p className="status live">
+        <p className="status">
           <i className="fa-solid fa-futbol"></i> Live {props.time}
         </p>
       );
@@ -27,7 +30,13 @@ const MatchCard = (props) => {
 
   return (
     <article className="today-match-card">
-      <div className="card-header">{getStatus()}</div>
+      <div
+        className={`card-header ${
+          props.status === "in_progress" ? "live" : "regular"
+        } `}
+      >
+        {getStatus()}
+      </div>
       <div className="team">
         <div>
           <img
@@ -36,7 +45,10 @@ const MatchCard = (props) => {
           />
           <p>{props.home_name}</p>
         </div>
-        <div className="score">{props.home_goals}</div>
+        <div className="score">
+          {props.home_goals}{" "}
+          {props.home_penalties ? `(${props.home_penalties})` : null}
+        </div>
       </div>
       <div className="team">
         <div>
@@ -46,7 +58,11 @@ const MatchCard = (props) => {
           />
           <p>{props.away_name}</p>
         </div>
-        <div className="score">{props.away_goals}</div>
+        <div className="score">
+          {" "}
+          {props.away_goals}{" "}
+          {props.away_penalties ? `(${props.away_penalties})` : null}
+        </div>
       </div>
     </article>
   );

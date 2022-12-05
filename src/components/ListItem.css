@@ -12,17 +12,22 @@
 }
 
 .list-item .match {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   gap: 1rem;
 }
 
-.list-item .match div {
-  background-color: aqua;
+.home-team {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+
+.away-team {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   gap: .5rem;
 }
 

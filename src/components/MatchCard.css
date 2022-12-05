@@ -8,7 +8,6 @@
 }
 
 .today-match-card .card-header {
-  background-color: var(--qatarDarkRed);
   height: 2rem;
   display: flex;
   align-items: center;
@@ -39,9 +38,11 @@
   background-color: var(--fifaGray);
   color: var(--qatarDarkRed);
   height: 2.5rem;
-  aspect-ratio: 1/1;
-  display: grid;
-  place-content: center;
+  aspect-ratio: 3/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: .5rem;
   font-weight: 700;
   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -51,4 +52,12 @@
   align-items: center;
   justify-content: start;
   gap: .5rem;
+}
+
+.regular {
+  background-color: var(--qatarDarkRed);
+}
+
+.live {
+  background-color: var(--qatarRed);
 }

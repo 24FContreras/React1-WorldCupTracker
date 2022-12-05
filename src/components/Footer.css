@@ -1,4 +1,34 @@
 footer {
   background-color: white;
-  padding: 1rem;
+}
+
+footer h3 {
+  color: var(--qatarDarkRed);
+  margin-bottom: .55rem;
+}
+
+footer p {
+  font-size: .9rem;
+  color: rgb(106, 106, 129);
+}
+
+footer a {
+  color: var(--qatarDarkRed);
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+footer a:hover,
+footer a:visited {
+  color: var(--qatarRed)
+}
+
+
+
+@media screen and (max-width: 850px) {
+
+  footer {
+    text-align: center;
+  }
+
 }

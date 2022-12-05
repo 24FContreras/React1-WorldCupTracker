@@ -2,7 +2,7 @@ import "./Busqueda.css";
 
 const Busqueda = (props) => {
   return (
-    <section className="buscador">
+    <article className="buscador">
       <form action="">
         <label htmlFor="searchbar">Search Country</label>
         <input
@@ -20,8 +20,18 @@ const Busqueda = (props) => {
           <option value="Semi-final">Semi Finals</option>
           <option value="Final">Final</option>
         </select>
+
+        <label htmlFor="selectorder">Order</label>
+        <select
+          name="selectorder"
+          id="selectorder"
+          onChange={props.changeOrder}
+        >
+          <option value="First to last">First to last</option>
+          <option value="Last to first">Last to first</option>
+        </select>
       </form>
-    </section>
+    </article>
   );
 };
 

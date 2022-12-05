@@ -7,6 +7,7 @@ const MiApi = () => {
   const [partidos, setPartidos] = useState([]);
   const [search, setSearch] = useState("");
   const [listData, setListData] = useState([]);
+  const [order, setOrder] = useState("First to last");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +32,9 @@ const MiApi = () => {
 
   return (
     <section className="all-matches-section">
-      <h2>Match list</h2>
+      <h2>
+        <i class="fa-solid fa-rectangle-list"></i> Match list
+      </h2>
 
       <Busqueda
         textvalue={search}
@@ -39,11 +42,14 @@ const MiApi = () => {
           setSearch(e.target.value);
         }}
         selectData={changeListData}
+        changeOrder={(e) => setOrder(e.target.value)}
       />
 
       <ul className="game-grid">
         {(search.length !== 0 ? filteredResults(listData) : listData)
-          .sort((a, b) => a.id - b.id)
+          .sort((a, b) =>
+            order === "First to last" ? a.id - b.id : b.id - a.id
+          )
           .map((item) => {
             return (
               <ListItem
@@ -54,9 +60,11 @@ const MiApi = () => {
                 home_team_country={item.home_team_country}
                 home_team_name={item.home_team.name}
                 home_team_goals={item.home_team.goals}
+                home_team_penalties={item.home_team.penalties}
                 away_team_country={item.away_team_country}
                 away_team_name={item.away_team.name}
                 away_team_goals={item.away_team.goals}
+                away_team_penalties={item.away_team.penalties}
               />
             );
           })}

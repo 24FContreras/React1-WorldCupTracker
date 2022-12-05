@@ -1,0 +1,39 @@
+.playoffs {
+  background-color: hsl(343, 73%, 32%);
+  background: no-repeat left top,
+    linear-gradient(hsla(282, 100%, 20%, 0.895), hsla(282, 100%, 20%, 0.692)), url("https://media.cnn.com/api/v1/images/stellar/prod/221125101457-02-senegal-qatar-1125.jpg?c=original&q=w_1376,c_fill");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+
+.playoffs .playoffs-tree {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+.playoffs-tree>* {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+.playoffs h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
+@media screen and (max-width: 850px) {
+  .playoffs .playoffs-tree {
+
+    grid-template-columns: 1fr;
+  }
+
+}

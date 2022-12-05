@@ -66,28 +66,45 @@ const ListItem = (props) => {
       ) : null}
       <p className="list-header">{formatDate(props.datetime)}</p>
       <div className="match">
-        <img
-          src={
-            props.home_team_name !== "To Be Determined"
-              ? `./flags/${props.home_team_country}.svg`
-              : `./flags/TBD.svg`
-          }
-          alt={props.home_team_name}
-        />
+        <div className="home-team">
+          <img
+            src={
+              props.home_team_name !== "To Be Determined"
+                ? `./flags/${props.home_team_country}.svg`
+                : `./flags/TBD.svg`
+            }
+            alt={props.home_team_name}
+          />
+          <p>{props.home_team_name}</p>
+        </div>
+
         <p>
-          {props.home_team_name}{" "}
-          <span className="list-score">{props.home_team_goals}</span> vs{" "}
-          <span className="list-score">{props.away_team_goals}</span>{" "}
-          {props.away_team_name}
+          <span className="list-score">
+            {props.home_team_goals}{" "}
+            {props.home_team_penalties
+              ? `(${props.home_team_penalties})`
+              : null}
+          </span>{" "}
+          vs{" "}
+          <span className="list-score">
+            {props.away_team_goals}{" "}
+            {props.away_team_penalties
+              ? `(${props.away_team_penalties})`
+              : null}{" "}
+          </span>{" "}
         </p>
-        <img
-          src={
-            props.away_team_name !== "To Be Determined"
-              ? `./flags/${props.away_team_country}.svg`
-              : `./flags/TBD.svg`
-          }
-          alt={props.home_team_name}
-        />
+
+        <div className="away-team">
+          <p>{props.away_team_name}</p>
+          <img
+            src={
+              props.away_team_name !== "To Be Determined"
+                ? `./flags/${props.away_team_country}.svg`
+                : `./flags/TBD.svg`
+            }
+            alt={props.away_team_name}
+          />
+        </div>
       </div>
     </li>
   );

@@ -1,9 +1,18 @@
-.today-section {
-  padding: 1rem;
-}
-
 .today-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   gap: 1rem;
+  padding-bottom: 3rem;
+  padding: 3rem;
+}
+
+.today-section h2 {
+  text-align: center;
+  color: var(--qatarDarkRed);
+}
+
+@media screen and (max-width: 850px) {
+  .today-grid {
+    padding: 0rem;
+  }
 }
