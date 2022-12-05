@@ -10,10 +10,25 @@ nav {
   justify-content: space-around;
 }
 
-nav .brand {
+nav .nav-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav .nav-head p {
   color: var(--qatarDarkRed);
   font-size: 20px;
   font-weight: bold;
+}
+
+nav .burger {
+  display: none;
+}
+
+nav .burger.expanded {
+  color: var(--qatarRed);
 }
 
 nav ul {
@@ -41,4 +56,50 @@ nav li a {
 
 nav li a:hover {
   color: var(--qatarRed);
+}
+
+.expanded {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width:850px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  nav .burger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: var(--qatarDarkRed);
+    transition: color .3s ease;
+  }
+
+  nav .burger.expanded {
+    color: var(--qatarRed);
+  }
+
+  .nav-head {
+    width: 100%;
+    position: relative;
+  }
+
+  .nav-links {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav ul li {
+    padding: 1rem;
+  }
+
 }
