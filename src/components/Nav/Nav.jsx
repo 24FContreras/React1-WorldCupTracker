@@ -13,7 +13,7 @@ const Nav = () => {
           className={isExpanded ? "burger expanded" : "burger"}
           onClick={() => setIsExpanded(isExpanded ? false : true)}
         >
-          <i class="fa-solid fa-bars fa-xl"></i>
+          <i className="fa-solid fa-bars fa-xl"></i>
         </button>
       </div>
 

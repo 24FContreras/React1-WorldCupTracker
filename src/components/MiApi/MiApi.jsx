@@ -19,17 +19,6 @@ const MiApi = () => {
     fetchData();
   }, []);
 
-  const filteredResults = (results) =>
-    results.filter(
-      (item) =>
-        item.home_team.name.toLowerCase().includes(search.toLowerCase()) ||
-        item.away_team.name.toLowerCase().includes(search.toLowerCase())
-    );
-
-  const changeListData = (e) => {
-    setListData(partidos.filter((item) => item.stage_name === e.target.value));
-  };
-
   return (
     <section className="all-matches-section" id="matchlist">
       <h2>
@@ -41,12 +30,25 @@ const MiApi = () => {
         setSearch={(e) => {
           setSearch(e.target.value);
         }}
-        selectData={changeListData}
+        selectData={(e) => {
+          setListData(
+            partidos.filter((item) => item.stage_name === e.target.value)
+          );
+        }}
         changeOrder={(e) => setOrder(e.target.value)}
       />
 
       <ul className="game-grid">
-        {(search.length !== 0 ? filteredResults(listData) : listData)
+        {(search.length !== 0
+          ? listData.filter(
+              (item) =>
+                item.home_team.name
+                  .toLowerCase()
+                  .includes(search.toLowerCase()) ||
+                item.away_team.name.toLowerCase().includes(search.toLowerCase())
+            )
+          : listData
+        )
           .sort((a, b) =>
             order === "First to last" ? a.id - b.id : b.id - a.id
           )
