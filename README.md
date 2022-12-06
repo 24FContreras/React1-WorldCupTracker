@@ -5,7 +5,7 @@
 ## Links
 
 - [Preview del sitio](https://worldcuptracker.netlify.app)
-- [Link al video explicatorio]([https://worldcuptracker.netlify.app](https://youtu.be/rHlAtsd_QjU))
+- [Link al video explicatorio](https://youtu.be/rHlAtsd_QjU)
 
 ## API Utilizada
 
