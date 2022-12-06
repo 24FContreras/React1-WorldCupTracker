@@ -1,17 +1,15 @@
-import Hero from "./components/Hero/Hero";
 import Nav from "./components/Nav/Nav";
-import MiApi from "./components/MiApi/MiApi";
-import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 import PartidosHoy from "./components/PartidosHoy/PartidosHoy";
 import Playoffs from "./components/Playoffs/Playoffs";
+import MiApi from "./components/MiApi/MiApi";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <>
       <Nav />
-      <header>
-        <Hero />
-      </header>
+      <Header />
       <main>
         <PartidosHoy />
         <Playoffs />
