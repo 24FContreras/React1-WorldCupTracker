@@ -1,6 +1,6 @@
 # Prueba final React I: World Cup Tracker
 
-## ![Screenshot de World Cup Tracker](./public/img/screenshot.png)
+## ![Screenshot de World Cup Tracker](./public/assets/img/screenshot.png)
 
 ## Links
 
