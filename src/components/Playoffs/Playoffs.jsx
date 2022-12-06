@@ -25,6 +25,7 @@ const Playoffs = () => {
       </h2>
       <div className="playoffs-tree">
         <div className="round-of-16">
+          <h3 className="round-title">ROUND OF 16</h3>
           {playoffData
             .sort((a, b) => a.id - b.id)
             .map((item) =>
@@ -55,6 +56,7 @@ const Playoffs = () => {
             )}
         </div>
         <div className="quarter-finals">
+          <h3 className="round-title">QUARTER-FINALS</h3>
           {playoffData
             .sort((a, b) => a.id - b.id)
             .map((item) =>
@@ -110,6 +112,7 @@ const Playoffs = () => {
         </div>
 
         <div className="semi-finals">
+          <h3 className="round-title">SEMI-FINALS</h3>
           {playoffData
             .sort((a, b) => a.id - b.id)
             .map((item) =>
@@ -138,6 +141,7 @@ const Playoffs = () => {
             )}
         </div>
         <div className="final">
+          <h3 className="round-title">FINAL</h3>
           {playoffData.map((item) =>
             item.stage_name === "Final" ? (
               <MatchCard

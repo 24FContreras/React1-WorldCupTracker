@@ -29,12 +29,21 @@
   margin-bottom: 3rem;
 }
 
+.playoffs .round-title {
+  display: none;
+}
 
 
 @media screen and (max-width: 850px) {
   .playoffs .playoffs-tree {
 
     grid-template-columns: 1fr;
+  }
+
+  .playoffs .round-title {
+    display: block;
+    color: white;
+    text-align: center;
   }
 
 }
