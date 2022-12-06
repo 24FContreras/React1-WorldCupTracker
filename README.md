@@ -5,11 +5,11 @@
 ## Links
 
 - [Preview del sitio](https://worldcuptracker.netlify.app)
-- [Link al video explicatorio](https://worldcuptracker.netlify.app)
+- [Link al video explicatorio]([https://worldcuptracker.netlify.app](https://youtu.be/rHlAtsd_QjU))
 
 ## API Utilizada
 
-Para crear el sitio decidí usar la api [World Cup JSON](https://worldcupjson.net/), API que registra los resultados y otros detalles del mundial FIFA Qatar 2022.
+Para crear el sitio decidí usar [World Cup JSON](https://worldcupjson.net/), API que registra los resultados y otros detalles del mundial FIFA Qatar 2022.
 
 ## Características
 
