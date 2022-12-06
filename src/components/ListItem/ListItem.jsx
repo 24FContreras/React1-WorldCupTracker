@@ -70,8 +70,8 @@ const ListItem = (props) => {
           <img
             src={
               props.home_team_name !== "To Be Determined"
-                ? `./flags/${props.home_team_country}.svg`
-                : `./flags/TBD.svg`
+                ? `./assets/flags/${props.home_team_country}.svg`
+                : `./assets/flags/TBD.svg`
             }
             alt={props.home_team_name}
           />
@@ -99,8 +99,8 @@ const ListItem = (props) => {
           <img
             src={
               props.away_team_name !== "To Be Determined"
-                ? `./flags/${props.away_team_country}.svg`
-                : `./flags/TBD.svg`
+                ? `./assets/flags/${props.away_team_country}.svg`
+                : `./assets/flags/TBD.svg`
             }
             alt={props.away_team_name}
           />

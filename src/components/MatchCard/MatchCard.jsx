@@ -40,7 +40,7 @@ const MatchCard = (props) => {
       <div className="team">
         <div>
           <img
-            src={`./flags/${props.home_country}.svg`}
+            src={`./assets/flags/${props.home_country}.svg`}
             alt={props.home_name}
           />
           <p>{props.home_name}</p>
@@ -53,7 +53,7 @@ const MatchCard = (props) => {
       <div className="team">
         <div>
           <img
-            src={`./flags/${props.away_country}.svg`}
+            src={`./assets/flags/${props.away_country}.svg`}
             alt={props.away_name}
           />
           <p>{props.away_name}</p>
