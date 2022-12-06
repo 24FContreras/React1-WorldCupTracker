@@ -1,25 +1,17 @@
 # Prueba final React I: World Cup Tracker
 
----
-
 ## ![Screenshot de World Cup Tracker](./public/img/screenshot.png)
 
 ## Links
-
----
 
 - [Preview del sitio](https://worldcuptracker.netlify.app)
 - [Link al video explicatorio](https://worldcuptracker.netlify.app)
 
 ## API Utilizada
 
----
-
 Para crear el sitio decidí usar la api [World Cup JSON](https://worldcupjson.net/), API que registra los resultados y otros detalles del mundial FIFA Qatar 2022.
 
 ## Características
-
----
 
 El sitio cuenta con un diseño responsivo, con tres secciones informativas:
 
