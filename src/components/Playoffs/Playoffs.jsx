@@ -73,6 +73,7 @@ const Playoffs = () => {
                   }
                   home_name={item.home_team.name}
                   home_goals={item.home_team.goals}
+                  home_penalties={item.home_team.penalties}
                   away_country={
                     item.away_team.name === "To Be Determined"
                       ? "TBD"
@@ -80,6 +81,7 @@ const Playoffs = () => {
                   }
                   away_name={item.away_team.name}
                   away_goals={item.away_team.goals}
+                  away_penalties={item.away_team.penalties}
                 />
               ) : null
             )}
@@ -99,6 +101,7 @@ const Playoffs = () => {
                   }
                   home_name={item.home_team.name}
                   home_goals={item.home_team.goals}
+                  home_penalties={item.home_team.penalties}
                   away_country={
                     item.away_team.name === "To Be Determined"
                       ? "TBD"
@@ -106,6 +109,7 @@ const Playoffs = () => {
                   }
                   away_name={item.away_team.name}
                   away_goals={item.away_team.goals}
+                  away_penalties={item.away_team.penalties}
                 />
               ) : null
             )}
@@ -129,6 +133,7 @@ const Playoffs = () => {
                   }
                   home_name={item.home_team.name}
                   home_goals={item.home_team.goals}
+                  home_penalties={item.home_team.penalties}
                   away_country={
                     item.away_team.name === "To Be Determined"
                       ? "TBD"
@@ -136,6 +141,7 @@ const Playoffs = () => {
                   }
                   away_name={item.away_team.name}
                   away_goals={item.away_team.goals}
+                  away_penalties={item.away_team.penalties}
                 />
               ) : null
             )}
@@ -156,6 +162,7 @@ const Playoffs = () => {
                 }
                 home_name={item.home_team.name}
                 home_goals={item.home_team.goals}
+                home_penalties={item.home_team.penalties}
                 away_country={
                   item.away_team.name === "To Be Determined"
                     ? "TBD"
@@ -163,6 +170,7 @@ const Playoffs = () => {
                 }
                 away_name={item.away_team.name}
                 away_goals={item.away_team.goals}
+                away_penalties={item.away_team.penalties}
               />
             ) : null
           )}
