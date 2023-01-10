@@ -1,22 +1,10 @@
 import { useEffect, useState } from "react";
 import MatchCard from "../MatchCard/MatchCard";
 import "./Playoffs.css";
+import matchesJson from "../../matches.json";
 
 const Playoffs = () => {
-  const [playoffData, setPlayoffData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch(
-        "https://worldcupjson.net/matches?start_date=2022-12-03&end_date=2022-12-31"
-      );
-      const data = await res.json();
-
-      setPlayoffData(data);
-    };
-
-    fetchData();
-  }, []);
+  const [playoffData, setPlayoffData] = useState(matchesJson);
 
   return (
     <section className="playoffs" id="playoffs">

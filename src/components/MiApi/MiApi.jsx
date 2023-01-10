@@ -2,22 +2,15 @@ import { useState, useEffect } from "react";
 import Busqueda from "../Busqueda/Busqueda";
 import ListItem from "../ListItem/ListItem";
 import "./MiApi.css";
+import matchesJson from "../../matches.json";
 
 const MiApi = () => {
-  const [partidos, setPartidos] = useState([]);
+  const [partidos, setPartidos] = useState(matchesJson);
   const [search, setSearch] = useState("");
-  const [listData, setListData] = useState([]);
+  const [listData, setListData] = useState(
+    matchesJson.filter((item) => item.stage_name === "First stage")
+  );
   const [order, setOrder] = useState("First to last");
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("https://worldcupjson.net/matches");
-      const data = await res.json();
-      setPartidos(data);
-      setListData(data.filter((item) => item.stage_name === "First stage"));
-    };
-    fetchData();
-  }, []);
 
   return (
     <section className="all-matches-section" id="matchlist">

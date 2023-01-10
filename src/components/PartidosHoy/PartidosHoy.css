@@ -11,6 +11,10 @@
   color: var(--qatarDarkRed);
 }
 
+.text-center {
+  text-align: center;
+}
+
 @media screen and (max-width: 850px) {
   .today-grid {
     padding: 0rem;

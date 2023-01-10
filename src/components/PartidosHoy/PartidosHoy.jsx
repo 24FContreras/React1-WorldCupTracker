@@ -1,19 +1,23 @@
 import { useState, useEffect } from "react";
 import MatchCard from "../MatchCard/MatchCard";
 import "./PartidosHoy.css";
+import matchesJson from "../../matches.json";
 
 const PartidosHoy = () => {
-  const [partidosHoy, setPartidosHoy] = useState([]);
+  const todayDate = new Date().toISOString().slice(0, 10);
+
+  const [partidosHoy, setPartidosHoy] = useState(matchesJson);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetch("https://worldcupjson.net/matches/today");
-      const data = await res.json();
+    const filtrado = () => {
+      const partidosDeHoy = partidosHoy.filter(
+        (item) => item.datetime.slice(0, 10) === todayDate
+      );
 
-      setPartidosHoy(data);
+      setPartidosHoy(partidosDeHoy);
     };
 
-    fetchData();
+    filtrado();
   }, []);
 
   return (
@@ -42,7 +46,7 @@ const PartidosHoy = () => {
             );
           })
         ) : (
-          <p>No Games today</p>
+          <p className="text-center">No Games today</p>
         )}
       </div>
     </section>
