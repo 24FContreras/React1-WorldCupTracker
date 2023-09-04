@@ -1,18 +1,8 @@
 import "./MatchCard.css";
 
+import formatDate from "../../utils/formatDate";
+
 const MatchCard = (props) => {
-  const formatDate = (date) => {
-    const getDate = new Date(date).toLocaleDateString("en-us", {
-      weekday: "long",
-      month: "short",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-
-    return getDate;
-  };
-
   const getStatus = () => {
     if (
       props.status === "future_scheduled" ||

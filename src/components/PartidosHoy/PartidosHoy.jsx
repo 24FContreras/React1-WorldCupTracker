@@ -3,6 +3,8 @@ import MatchCard from "../MatchCard/MatchCard";
 import "./PartidosHoy.css";
 import matchesJson from "../../matches.json";
 
+import { useFetchData } from "../../hooks/useFetchData";
+
 const PartidosHoy = () => {
   const todayDate = new Date().toISOString().slice(0, 10);
 
