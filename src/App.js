@@ -2,7 +2,7 @@ import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
 import PartidosHoy from "./components/PartidosHoy/PartidosHoy";
 import Playoffs from "./components/Playoffs/Playoffs";
-import MiApi from "./components/MiApi/MiApi";
+import MatchList from "./components/MatchList/MatchList";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <main>
         <PartidosHoy />
         <Playoffs />
-        <MiApi />
+        <MatchList />
       </main>
       <Footer />
     </>

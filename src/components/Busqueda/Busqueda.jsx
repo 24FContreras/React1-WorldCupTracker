@@ -1,6 +1,6 @@
 import "./Busqueda.css";
 
-const Busqueda = (props) => {
+const Busqueda = ({ setSearch, textvalue, selectData, changeOrder }) => {
   return (
     <article className="buscador">
       <form action="">
@@ -8,12 +8,12 @@ const Busqueda = (props) => {
         <input
           name="searchbar"
           type="text"
-          onChange={props.setSearch}
-          value={props.textvalue}
+          onChange={setSearch}
+          value={textvalue}
         />
 
         <label htmlFor="selectdata">Filter by Stage</label>
-        <select name="selectdata" id="selectdata" onChange={props.selectData}>
+        <select name="selectdata" id="selectdata" onChange={selectData}>
           <option value="First stage">Group Stage</option>
           <option value="Round of 16">Round of 16</option>
           <option value="Quarter-final">Quarter Finals</option>
@@ -22,11 +22,7 @@ const Busqueda = (props) => {
         </select>
 
         <label htmlFor="selectorder">Order</label>
-        <select
-          name="selectorder"
-          id="selectorder"
-          onChange={props.changeOrder}
-        >
+        <select name="selectorder" id="selectorder" onChange={changeOrder}>
           <option value="First to last">First to last</option>
           <option value="Last to first">Last to first</option>
         </select>
