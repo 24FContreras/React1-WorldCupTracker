@@ -1,6 +1,6 @@
 import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
-import PartidosHoy from "./components/PartidosHoy/PartidosHoy";
+import TodaysGames from "./components/TodaysGames/TodaysGames";
 import Playoffs from "./components/Playoffs/Playoffs";
 import MatchList from "./components/MatchList/MatchList";
 import Footer from "./components/Footer/Footer";
@@ -11,7 +11,7 @@ function App() {
       <Nav />
       <Header />
       <main>
-        <PartidosHoy />
+        <TodaysGames />
         <Playoffs />
         <MatchList />
       </main>
